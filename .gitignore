@@ -1,0 +1,69 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+.env.*
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+.pub-cache/
+/build/
+
+# Generated files
+coverage/
+*.lock
+
+# Flutter docs
+**/doc/api/
+
+# iOS
+**/ios/Flutter/.last_build_id
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+
+# Android
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Symbolication
+app.*.symbols
+
+# Obfuscation
+app.*.map.json
+
+# Firebase
+google-services.json
+GoogleService-Info.plist
+
+# Keystore / signing
+*.jks
+*.keystore
+key.properties
