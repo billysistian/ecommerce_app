@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'features/auth/login_page.dart';
-import 'features/home/home_page.dart';
+import 'features/home/page/home_page.dart';
 import 'providers/auth_provider.dart';
 
 class MyApp extends ConsumerStatefulWidget {
