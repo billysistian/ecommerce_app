@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'features/auth/login_page.dart';
-import 'features/home/page/home_page.dart';
-import 'providers/auth_provider.dart';
+import 'features/auth/presentation/providers/auth_provider.dart';
+import 'routes/app_pages.dart';
 
 class MyApp extends ConsumerStatefulWidget {
   const MyApp({super.key});
@@ -29,9 +28,11 @@ class _MyAppState extends ConsumerState<MyApp> {
     print('APP REBUILD');
     print(user);
 
-    return MaterialApp(
+    final router = ref.watch(routerProvider);
+
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: user == null ? const LoginPage() : const HomePage(),
+      routerConfig: router,
     );
   }
 }
