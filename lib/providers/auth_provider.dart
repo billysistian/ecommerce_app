@@ -19,22 +19,19 @@ class AuthNotifier extends StateNotifier<UserModel?> {
         password: password,
       );
 
-      print('LOGIN RESPONSE');
-      print(response);
+      final data = response['data'] as Map<String, dynamic>;
 
-      final token = response['token'];
+      final token = data['token'] as String;
+
+      final user = UserModel.fromJson(data['user'] as Map<String, dynamic>);
 
       await LocalStorage.saveToken(token);
-
-      final user = UserModel.fromJson(response['user']);
 
       state = user;
 
       return true;
     } catch (e) {
-      print('LOGIN ERROR');
-      print(e);
-
+      print('LOGIN ERROR: $e');
       rethrow;
     }
   }

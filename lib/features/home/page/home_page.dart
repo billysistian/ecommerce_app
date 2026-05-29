@@ -141,7 +141,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                     children: [
                       HomeHeader(user: user),
 
-                      const SizedBox(height: 24),
+                      const SizedBox(height: 10),
 
                       HomeSearchBar(
                         controller: searchController,
@@ -150,15 +150,15 @@ class _HomePageState extends ConsumerState<HomePage> {
                         },
                       ),
 
-                      const SizedBox(height: 24),
+                      const SizedBox(height: 10),
 
                       const HomeCategoriesSection(),
 
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 20),
 
                       const HomePromoBanner(),
 
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 20),
 
                       HomePopularItemsHeader(
                         gridColumns: gridColumns,
@@ -189,7 +189,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                         },
                       ),
 
-                      const SizedBox(height: 24),
+                      const SizedBox(height: 20),
 
                       if (notifier.loading)
                         const Center(child: CircularProgressIndicator()),
